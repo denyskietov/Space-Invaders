@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Space Invaders</title>
+
+        <link rel="preload" href="assets/fonts/font-8-bit.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" href="./styles/app.css"/>
+        <script type="module" src="./scripts/game.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas">Oops, your browser does not support canvas. Try another browser.</canvas>
+    </body>
+    <!-- Start application as soon as document is ready -->
+    <script type="module">
+        import {Game} from './scripts/game.js';
+
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                new Game().start();
+            }
+        }
+    </script>
+</html>
